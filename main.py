@@ -15,15 +15,25 @@ def get_db_connection():
             database="store"
         )
     except Exception as e:
-      print(e)
+      print(e.with_traceback())
 
 def create_tables(conn):
     try:
         cursor = conn.cursor()
         cursor.execute(open('table_creation.sql', 'r').read())
+        conn.commit()
         cursor.close()
     except Exception as e:
-        print(e)
+        print(e.with_traceback())
+
+def insert_starting_data(conn):
+    try:
+        cursor = conn.cursor()
+        cursor.execute(open('data_creation.sql', 'r').read())
+        conn.commit()
+        cursor.close()
+    except Exception as e:
+        print(e.with_traceback())
 
 def get_user_input():
     return input("Enter a prompt: ")
@@ -31,12 +41,6 @@ def get_user_input():
 def main():
     conn = get_db_connection()
     create_tables(conn=conn)
-
-    # run the show table command
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM pg_catalog.pg_tables WHERE schemaname != 'pg_catalog' AND schemaname != 'information_schema';")
-    tables = cursor.fetchall()
-    print(tables)
-    cursor.close()
+    insert_starting_data(conn=conn)
 
 main()
