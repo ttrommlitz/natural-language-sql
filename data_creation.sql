@@ -1,4 +1,5 @@
 -- Insert Users
+
 INSERT INTO Users (FirstName, LastName, Email)
 VALUES ('Alice', 'Smith', 'alice@example.com'),
 ('Bob', 'Johnson', 'bob@example.com'),

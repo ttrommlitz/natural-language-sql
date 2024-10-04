@@ -21,7 +21,8 @@ CREATE TABLE IF NOT EXISTS Products (
   Category VARCHAR(50) NOT NULL
 ); 
  
- -- Create Orders Table 
+ -- Create Orders Table
+
 CREATE TABLE IF NOT EXISTS Orders (
   OrderID SERIAL PRIMARY KEY, 
   UserID INT NOT NULL,
@@ -31,6 +32,7 @@ CREATE TABLE IF NOT EXISTS Orders (
 ); 
 
 -- Create OrderDetails Table
+
 CREATE TABLE IF NOT EXISTS OrderDetails (
 OrderID INT NOT NULL,
 ProductID INT NOT NULL,
