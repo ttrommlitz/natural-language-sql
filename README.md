@@ -3,6 +3,7 @@
 Our database is meant to model a store. The database has 4 tables: Users, Products, Orders, and OrderDetails.
 
 ## Schema Picture
+![Alt text](EF750121-CBE0-4872-BBC8-2FDDE3B5B431_1_201_a.jpeg)
 
 ## Sample Question that worked well:
 
