@@ -52,7 +52,8 @@ LINE 1: SELECT SUM(Product.Price * OrderDetails.Quantity) AS TotalSp...
 ## Prompting strategies
 
 We tried both zero-shot and few-shot prompting. The few-shot prompting performed vastly better than zero-shot prompting.
-Only extremely simple prompts such as "How many orders are there?" worked with zero-shot prompting. In order to get more complicated prompts such as "What is the total revenue generated from each product category?" an example query and response was needed.
+Only extremely simple prompts such as "How many orders are there?" worked with zero-shot prompting.
+In order to get more complicated prompts such as "What is the total revenue generated from each product category?" an example query and response was needed.
 
 ## More Query Examples
 
@@ -178,6 +179,7 @@ LIMIT 1;
 [
     ('Eve Davis', Decimal('3200.00'))
 ]
+```
 
 - Question 7: Who placed the most recent order?
 - Model SQL Query: 
