@@ -48,3 +48,5 @@ Traceback (most recent call last):
 psycopg2.errors.UndefinedTable: missing FROM-clause entry for table "product"
 LINE 1: SELECT SUM(Product.Price * OrderDetails.Quantity) AS TotalSp...
 ```
+
+## 6 More Query Examples
