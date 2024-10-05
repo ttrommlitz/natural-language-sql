@@ -77,7 +77,7 @@ def main():
     create_tables(conn=conn)
     insert_starting_data(conn=conn)
 
-    openai = OpenAI()
+    openai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
     user_input = get_user_input()
     zero_shot_model_input = zero_shot_single_domain(user_input)
